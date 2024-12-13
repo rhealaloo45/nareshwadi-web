@@ -8,5 +8,5 @@ from . import views
 from . import views
 urlpatterns = [
     path('',csrf_exempt(views.index), name='app'),
-    # path('home',views.home, name='home'),
+    path('disease',views.disease, name='disease'),
 ]

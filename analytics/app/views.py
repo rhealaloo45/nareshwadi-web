@@ -10,3 +10,9 @@ import json
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
+
+def disease(request):
+    return render(request, 'home/disease.html')
+
+def milk(request):
+    return render(request, 'home/milk.html')
