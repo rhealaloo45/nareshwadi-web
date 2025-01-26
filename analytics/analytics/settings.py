@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import ssl
+import os
+from pathlib import Path
 ssl._create_default_https_context = ssl._create_unverified_context
 
 from pathlib import Path
@@ -139,3 +141,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Model directory - not necessary to change unless you want it dynamic
+MODEL_PATH = os.path.join(BASE_DIR, 'models', 'lstm_milk_yield_model.h5')

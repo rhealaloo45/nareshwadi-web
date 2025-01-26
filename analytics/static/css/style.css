@@ -225,10 +225,19 @@ header{
 .big-feature-container{
     gap: 30px;
 }
-
-.feature-image img{
-    width: 100%;
+.big-feature-section h2 {
+    text-align: center; /* Centers the text horizontally */
+    margin: 0 auto; /* Ensures proper alignment within its container */
 }
+
+.feature-image {
+    width: 100%;
+    display: flex; /* Enables flexbox for the container */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    flex-direction: column; /* Keeps content stacked (optional) */
+}
+
 
 .feature-description{
     flex-direction: column;
@@ -323,3 +332,11 @@ footer{
     justify-content: center;
     gap: 30px;
 }
+
+.form-text {
+    font-size: 0.35rem; /* Smaller font size */
+    color: #6c757d;    /* Light gray text */
+    margin-top: 0.25rem;
+    
+  }
+  
