@@ -1,59 +1,110 @@
-{%extends 'base.html' %}
-
-
-{%block banner%}
-    <!-- TOP BANNER -->
-    <div class="top-banner">
-        
-        <div class="container">
-            <div class="small-bold-text banner-text">🐄 Empowering Dairy Farmers with Precision and Care. →</div>
-        </div>
+{%extends 'base.html' %} {%block banner%}
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <div class="container">
+    <div class="small-bold-text banner-text">
+      🐄 Empowering Dairy Farmers with Precision and Care. →
     </div>
-{% endblock banner%}
+  </div>
+</div>
+{% endblock banner%} {%block bodycontent%}
+<!-- HEADER -->
+<header>
+  <div class="container header-section flex">
+    <div class="header-left">
+      <h1>Ensure Optimal Milk Yield.</h1>
+      <p>
+        Our app helps dairy farmers monitor cow health and milk production in
+        real-time, optimizing yield and ensuring a steady, profitable supply.
+      </p>
+    </div>
+    <div class="header-right">
+      <img src="/static/images/main_farm.jpg" alt="hero image" />
+    </div>
+  </div>
+</header>
 
-{%block bodycontent%}
-    <!-- HEADER -->
-    <header>
-        <div class="container header-section flex">
-            <div class="header-left">
-                <h1>Ensure Optimal Milk Yield.</h1>
-                <p>Our app helps dairy farmers monitor cow health and milk production in real-time, optimizing yield and ensuring a steady, profitable supply.</p> 
-            </div>
-            <div class="header-right">
-                <img src="/static/images/main_farm.jpg" alt="hero image">
-            </div>
-        </div>
-    </header>
+<section class="big-feature-section">
+  <h2>Real-time Farm Monitoring</h2>
+  <br />
+  <div class="container flex big-feature-container">
+    <div class="feature-image">
+      <h3>Farm Temperature</h3>
+      <iframe
+        width="100%"
+        height="260"
+        style="
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          border: 1px solid #cccccc;
+        "
+        src="https://thingspeak.com/channels/2784726/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"
+      >
+      </iframe>
+    </div>
 
-    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2784726/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+    <div class="feature-image">
+      <h3>Farm Humidity</h3>
+      <iframe
+        width="100%"
+        height="260"
+        style="
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          border: 1px solid #cccccc;
+        "
+        src="https://thingspeak.com/channels/2784726/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"
+      >
+      </iframe>
+    </div>
+  </div>
+</section>
 
-    
+<!-- examples-section -->
+<section class="examples-section">
+  <div class="container">
+    <div class="examples-header flex">
+      <h2 style="padding: 20px">One platform, endless possibilities</h2>
+      <!-- <a href="#" class="secondary-button">See all examples <i class="fa-solid fa-right-long"></i></a> -->
+    </div>
+    <div class="example-area flex">
+      <a href="#" class="example-card">
+        <h3 class="card-text">
+          India aims to produce 30% of the world's milk by 2030, emphasizing
+          sustainable practices.
+        </h3>
+      </a>
+      <a
+        href="#"
+        class="example-card"
+        style="
+          background-image: linear-gradient(
+              rgb(0, 0, 0, 0.1),
+              rgb(0, 0, 0, 0.8)
+            ),
+            url(/static/images/herd.jpg);
+          background-size: cover;
+        "
+      >
+        <h3 class="card-text">
+          Brazilian Gir cow genetics in Gujarat have doubled milk yield to 30
+          liters/day.
+        </h3>
+      </a>
+      <a href="#" class="example-card">
+        <h3 class="card-text">
+          Mastitis affects 40% of cattle, reducing milk yield and quality.
+        </h3>
+      </a>
+      <a href="#" class="example-card">
+        <h3 class="card-text">
+          Milk production slowed to 3.83% in 2022, partly due to mastitis.
+        </h3>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <!-- examples-section -->
-    <section class="examples-section">
-        <div class="container">
-            <div class="examples-header flex" >
-                <h2 style="padding: 20px">One platform, endless possibilities</h2>
-                <!-- <a href="#" class="secondary-button">See all examples <i class="fa-solid fa-right-long"></i></a> -->
-            </div>
-            <div class="example-area flex">
-                <a href="#" class="example-card">
-                    <h3 class="card-text">India aims to produce 30% of the world's milk by 2030, emphasizing sustainable practices.</h3>
-                </a>
-                <a href="#" class="example-card" style="background-image: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.8)), url(/static/images/herd.jpg); background-size:cover">
-                    <h3 class="card-text">Brazilian Gir cow genetics in Gujarat have doubled milk yield to 30 liters/day.</h3>
-                </a>
-                <a href="#" class="example-card">
-                    <h3 class="card-text">Mastitis affects 40% of cattle, reducing milk yield and quality. </h3>
-                </a>
-                <a href="#" class="example-card">
-                    <h3 class="card-text">Milk production slowed to 3.83% in 2022, partly due to mastitis. </h3>
-                </a>
-            </div>
+<!-- CTA -->
 
-        </div>
-    </section>
-
-    <!-- CTA -->
-    
 {%endblock bodycontent%}
