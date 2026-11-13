@@ -83,9 +83,7 @@ DATABASES = {
         "ENGINE": "djongo",
         "NAME": "my_app",  # Replace with your database name
         "CLIENT": {
-            "host": "mongodb+srv://REDACTED@cluster0.zqc82gq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-            'username': 'dbUser',
-            'password': 'REDACTED',
+            "host": os.environ.get("MONGODB_URI", ""),   # the full connection string, set outside the code
             "retryWrites": True,
             'ssl': True,
             'ssl_cert_reqs': ssl.CERT_NONE,
